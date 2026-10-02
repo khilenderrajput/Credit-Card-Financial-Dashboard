@@ -1,9 +1,9 @@
-# 📊 Power BI Analytics & Dashboard Architecture
+# 📊 Power BI Analytics & Dashboard
 
-This documentation layer outlines the enterprise Power BI design, data modeling, Power Query ETL steps, DAX calculations, and report visualization architecture for the **Credit Card Financial Analytics Dashboard**.
+Power BI was used as the **primary dashboard and business intelligence tool** for transforming the analyzed credit card data into executive KPIs, interactive visualizations, customer demographic insights, revenue analysis, transaction trends, and risk monitoring.
 
-> **Note on Power BI Artifacts:**  
-> This directory represents the **Power BI Analytics Specification & Documentation Layer**. It contains the comprehensive data modeling guidelines, DAX measures, and visual configuration instructions required to build or connect this dataset in Microsoft Power BI Desktop. The live interactive web demonstration of this dashboard is powered by the accompanying React + Vite production application.
+> **Architecture Context:**  
+> Power BI served as the primary analytics and dashboard tool. Because exporting and hosting a Power BI dashboard directly as an open live HTML web link has hosting and licensing constraints, a JavaScript/React implementation was built as a live presentation layer for portfolio demonstration. This directory documents the full Power BI data modeling, Power Query transformations, and DAX calculations.
 
 ---
 

@@ -1,14 +1,12 @@
--- ==============================================================================
+
 -- 04_transaction_analysis.sql
--- Credit Card Financial Analytics - Transaction Volume, Spend, and Trends
--- ==============================================================================
 
 USE credit_card_db;
 
 -- ------------------------------------------------------------------------------
 -- 1. High-Level Transaction Portfolio Metrics
 -- Total transactions, total spend, and average transaction ticket size
--- ------------------------------------------------------------------------------
+
 SELECT 
     SUM(Total_Trans_Ct) AS total_transaction_count,
     ROUND(SUM(Total_Trans_Amt), 2) AS total_transaction_amount,
@@ -17,10 +15,10 @@ SELECT
     ROUND(AVG(Total_Trans_Ct), 1) AS avg_transactions_per_account
 FROM vw_credit_card_master;
 
--- ------------------------------------------------------------------------------
+
 -- 2. Transaction Spend & Revenue by Expense Category (Exp_Type)
 -- Categories: Bills, Entertainment, Fuel, Grocery, Food, Travel
--- ------------------------------------------------------------------------------
+
 SELECT 
     Exp_Type,
     COUNT(Client_Num) AS account_count,
@@ -37,7 +35,7 @@ ORDER BY total_revenue DESC;
 -- ------------------------------------------------------------------------------
 -- 3. Spend & Revenue by Expenditure Method / Channel (Use_Chip)
 -- Channels: Swipe, Chip, Online
--- ------------------------------------------------------------------------------
+
 SELECT 
     Use_Chip AS payment_method,
     COUNT(Client_Num) AS account_count,
@@ -50,10 +48,10 @@ FROM vw_credit_card_master
 GROUP BY Use_Chip
 ORDER BY total_revenue DESC;
 
--- ------------------------------------------------------------------------------
+
 -- 4. Cross-Analysis: Expense Category by Payment Method
 -- Matrix of how customers pay for different spending categories
--- ------------------------------------------------------------------------------
+
 SELECT 
     Exp_Type,
     ROUND(SUM(CASE WHEN Use_Chip = 'Swipe' THEN Total_Revenue ELSE 0 END), 2) AS swipe_revenue,
@@ -67,7 +65,7 @@ ORDER BY total_category_revenue DESC;
 -- ------------------------------------------------------------------------------
 -- 5. Quarterly Transaction & Revenue Trends (Q1 - Q4)
 -- Tracks seasonality, quarter-over-quarter trajectory, and volume
--- ------------------------------------------------------------------------------
+
 SELECT 
     Qtr,
     COUNT(Client_Num) AS accounts_active,
@@ -83,7 +81,7 @@ ORDER BY Qtr ASC;
 -- ------------------------------------------------------------------------------
 -- 6. Weekly Revenue & Week-over-Week (WoW) Momentum
 -- Utilizes LAG() window function to calculate WoW change in dollar and percentage
--- ------------------------------------------------------------------------------
+
 WITH weekly_summary AS (
     SELECT 
         Week_Number,
@@ -117,7 +115,7 @@ ORDER BY Week_Number ASC;
 -- ------------------------------------------------------------------------------
 -- 7. High-Volume vs Low-Volume Spender Segmentation
 -- Groups accounts by transaction frequency to examine revenue concentration
--- ------------------------------------------------------------------------------
+
 SELECT 
     CASE 
         WHEN Total_Trans_Ct >= 100 THEN 'Very High Frequency (100+)'

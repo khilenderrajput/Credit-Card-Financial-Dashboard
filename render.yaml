@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: credit-card-dashboard
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist

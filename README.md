@@ -21,18 +21,13 @@ A separate JavaScript + React + Vite dashboard is included as an interactive pre
 
 ---
 
-## 🌐 Live Interactive Dashboard
+## 🚀 Live Dashboard
 
-This project also includes a live JavaScript-based dashboard that provides an interactive way to explore and present the analytical findings.
+<a href="https://credit-card-financial-dashboard-5p2g.onrender.com" target="_blank">
+  <img src="https://img.shields.io/badge/🚀%20LIVE%20DASHBOARD-OPEN%20PROJECT-111827?style=for-the-badge" />
+</a>
 
-<p align="center">
-  <a href="https://credit-card-financial-dashboard-5p2g.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/🚀%20OPEN%20LIVE%20DASHBOARD-000000?style=for-the-badge&logo=render&logoColor=white" />
-  </a>
-</p>
-
-> 🔗 **Live Dashboard URL:**  
-> [https://credit-card-financial-dashboard-5p2g.onrender.com](https://credit-card-financial-dashboard-5p2g.onrender.com)
+The live dashboard provides an interactive way to explore and present the analytical findings from the project.
 
 ---
 

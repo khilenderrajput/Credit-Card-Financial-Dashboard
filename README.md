@@ -1,339 +1,677 @@
 # 💳 Credit Card Financial Analytics Dashboard
 
-[![SQL](https://img.shields.io/badge/SQL-MySQL%20%7C%20PostgreSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](#-sql-analytics)
-[![Power BI](https://img.shields.io/badge/Power_BI-Analytics%20%26%20DAX-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](#-power-bi-analytics--modeling)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](#-interactive-web-dashboard-react--vite)
-[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](#-production-build)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#-tools--technologies)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](#-project-structure)
-[![Render](https://img.shields.io/badge/Render-Static%20Site-46E3B7?style=for-the-badge&logo=render&logoColor=black)](#-render-deployment)
+<p align="center">
+  <img src="https://img.shields.io/badge/Financial%20Analytics-Project-111827?style=for-the-badge&logo=googleanalytics&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-Analytics-0F766E?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Power%20BI-Business%20Intelligence-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
+</p>
 
-> **An End-to-End Financial Analytics Portfolio Project** integrating:
-> 1. **SQL Data Pipeline & Warehousing Queries** (schema design, data cleaning, customer segmentation, transaction trends, financial KPIs).
-> 2. **Power BI Modeling & DAX Documentation Layer** (star schema, DAX formulas, interactive visual blueprints).
-> 3. **Production React/Vite Web Application** deployed live on Render for interactive stakeholder data exploration.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Render-Deployed-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
+</p>
 
----
-
-## 🌐 Live Web Demo
-
-**Render Deployment:**  
-🔗 **[Render URL]** *(Insert your Render deployed URL here once live)*
-
-- **Service Type:** Static Site
-- **Build Command:** `npm install && npm run build`
-- **Publish Directory:** `dist`
+<p align="center">
+  <img src="https://img.shields.io/badge/Git-GitHub-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSV-Data%20Analysis-217346?style=for-the-badge&logo=files&logoColor=white" />
+  <img src="https://img.shields.io/badge/Data%20Visualization-Recharts-8884D8?style=for-the-badge" />
+</p>
 
 ---
 
-## 📑 Table of Contents
+## ✦ Live Dashboard
 
-- [Project Overview](#-project-overview)
-- [Business Problem & Objectives](#-business-problem--objectives)
-- [Architecture & Tech Stack](#-architecture--tech-stack)
-- [Datasets & Data Model](#-datasets--data-model)
-- [SQL Analytics Suite](#-sql-analytics-suite)
-- [Power BI Analytics & Modeling](#-power-bi-analytics--modeling)
-- [Interactive Web Dashboard (React + Vite)](#-interactive-web-dashboard-react--vite)
-- [Verified Financial KPIs](#-verified-financial-kpis)
-- [Key Business Insights](#-key-business-insights)
-- [Project Structure](#-project-structure)
-- [How to Run Locally](#-how-to-run-locally)
-- [Production Build & Deployment](#-production-build--deployment)
-- [Documentation Links](#-documentation-links)
+<p align="center">
+
+<a href="https://credit-card-financial-dashboard-5p2g.onrender.com" target="_blank">
+
+<img src="https://img.shields.io/badge/🚀%20OPEN%20LIVE%20DASHBOARD-000000?style=for-the-badge&logo=render&logoColor=white" />
+
+</a>
+
+</p>
+
+<p align="center">
+<b>Interactive production dashboard deployed on Render</b>
+</p>
+
+> 🔗 **Live Demo:**
+> https://credit-card-financial-dashboard-5p2g.onrender.com
 
 ---
 
-## 🔍 Project Overview
+## ✦ Project Overview
 
-Consumer credit card operations generate massive volumes of transactional, behavioral, and demographic data. Financial institutions require multi-tiered analytics capabilities to monitor portfolio performance, manage credit risk, optimize acquisition costs, and identify high-value customer cohorts.
+**Credit Card Financial Analytics Dashboard** is an end-to-end financial analytics portfolio project designed to transform raw credit-card customer and transaction data into meaningful business intelligence.
 
-This project delivers an end-to-end analytics solution across three synchronized layers:
-1. **Relational Database & SQL Layer (`SQL/`):** Full analytical query pipeline covering DDL, data cleaning, customer profiling, transaction spend distributions, and executive KPIs.
-2. **Business Intelligence & DAX Layer (`PowerBI/`):** Detailed specification of star schema modeling, Power Query ETL steps, DAX calculations, and executive reporting canvas.
-3. **Interactive Web Dashboard Layer (`src/` + `public/`):** A responsive, client-side React 18 single-page application built with Vite and Recharts, providing instant filtering and interactive exploration of 10,293 customer accounts.
+The project combines:
 
+* 🗄️ **SQL** for structured data analysis
+* 📊 **Power BI** for business-intelligence modeling and reporting design
+* 💻 **React + Vite** for an interactive web-based analytics dashboard
+* 📈 **Recharts** for dynamic data visualization
+* 📁 **CSV datasets** for financial and customer analytics
+* 🚀 **Render** for production deployment
+
+The objective is to provide a centralized analytical view of:
+
+**Revenue → Transactions → Customers → Card Categories → Spending → Risk → Acquisition → Financial KPIs**
+
+---
+
+# ✦ Business Problem
+
+Credit-card businesses generate large volumes of transactional and customer data.
+
+Raw datasets alone do not provide an immediate understanding of:
+
+* Which card categories generate the most revenue?
+* How are transactions changing over time?
+* Which customer segments contribute the highest revenue?
+* Which expenditure categories dominate customer spending?
+* How does customer acquisition cost compare with portfolio performance?
+* What percentage of accounts become delinquent?
+* Which demographic groups contribute significantly to revenue?
+* How does credit utilization relate to financial risk?
+
+This project transforms those raw datasets into an analytics system designed for business exploration and decision support.
+
+---
+
+# ✦ Project Objectives
+
+### 01 — Financial Performance
+
+Analyze:
+
+* Total revenue
+* Transaction amount
+* Transaction count
+* Interest earned
+* Annual fees
+* Card-category performance
+
+### 02 — Customer Analytics
+
+Understand:
+
+* Age groups
+* Gender distribution
+* Income groups
+* Education
+* Occupation
+* State-level performance
+* Customer segmentation
+
+### 03 — Transaction Analytics
+
+Analyze:
+
+* Spending categories
+* Payment channels
+* Card categories
+* Weekly trends
+* Quarterly trends
+* Transaction frequency
+
+### 04 — Risk Analytics
+
+Monitor:
+
+* Delinquent accounts
+* Credit utilization
+* Revolving balances
+* Activation behavior
+
+### 05 — Business Intelligence
+
+Build a reusable analytics structure combining:
+
+**SQL + Power BI + Interactive Web Dashboard**
+
+---
+
+# ✦ Analytics Architecture
+
+```text
+                         ┌──────────────────────────┐
+                         │       RAW DATASETS       │
+                         │                          │
+                         │  Customer CSV            │
+                         │  Credit Card CSV         │
+                         │  Additional CSV Data     │
+                         └────────────┬─────────────┘
+                                      │
+                    ┌─────────────────┴─────────────────┐
+                    │                                   │
+                    ▼                                   ▼
+          ┌──────────────────┐                ┌──────────────────┐
+          │    SQL LAYER     │                │   POWER BI LAYER │
+          │                  │                │                  │
+          │ Data Cleaning    │                │ Data Modeling    │
+          │ Aggregations     │                │ Power Query      │
+          │ KPIs             │                │ DAX              │
+          │ Segmentation     │                │ Visualization    │
+          └─────────┬────────┘                └─────────┬────────┘
+                    │                                   │
+                    └─────────────────┬─────────────────┘
+                                      │
+                                      ▼
+                         ┌──────────────────────────┐
+                         │   INTERACTIVE DASHBOARD  │
+                         │                          │
+                         │       React + Vite       │
+                         │       Recharts            │
+                         └────────────┬─────────────┘
+                                      │
+                                      ▼
+                         ┌──────────────────────────┐
+                         │          RENDER          │
+                         │     Production Hosting   │
+                         └──────────────────────────┘
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                           RAW CSV DATASETS                                  │
-│       credit_card.csv  ·  customer.csv  ·  incremental additions            │
-└───────────────────────┬───────────────────────────────┬─────────────────────┘
-                        │                               │
-                        ▼                               ▼
-       ┌─────────────────────────────────┐   ┌─────────────────────────────┐
-       │         SQL DATA LAYER          │   │      POWER BI LAYER         │
-       │  • Relational Schema DDL        │   │  • Star Schema Model        │
-       │  • Data Cleaning & Views        │   │  • Power Query ETL          │
-       │  • Customer & Spend Analysis    │   │  • DAX Financial Measures   │
-       │  • Risk & KPI Queries           │   │  • Executive Visual Specs   │
-       └─────────────────────────────────┘   └─────────────────────────────┘
-                        │                               │
-                        └───────────────┬───────────────┘
-                                        ▼
-       ┌─────────────────────────────────────────────────────────────────┐
-       │                LIVE INTERACTIVE WEB APPLICATION                 │
-       │  • Built with React 18 + Vite 5 + Recharts                      │
-       │  • Client-side data parsing & cross-filtering                   │
-       │  • Deployed continuously on Render (Static Site)                │
-       └─────────────────────────────────────────────────────────────────┘
+
+---
+
+# ✦ Technology Stack
+
+| Category              | Technologies    |
+| --------------------- | --------------- |
+| Database & Analytics  | SQL             |
+| Business Intelligence | Power BI        |
+| Frontend              | React 18        |
+| Build Tool            | Vite 5          |
+| Programming           | JavaScript ES6+ |
+| Visualization         | Recharts        |
+| Data Source           | CSV             |
+| Data Parsing          | PapaParse       |
+| Version Control       | Git + GitHub    |
+| Deployment            | Render          |
+| Documentation         | Markdown        |
+
+---
+
+# ✦ SQL Analytics
+
+The `SQL/` directory contains the analytical SQL layer of the project.
+
+### SQL Modules
+
+```text
+SQL/
+│
+├── 01_database_schema.sql
+├── 02_data_cleaning.sql
+├── 03_customer_analysis.sql
+├── 04_transaction_analysis.sql
+└── 05_kpi_analysis.sql
+```
+
+### Analysis Areas
+
+#### Customer Analytics
+
+* Customer segmentation
+* Gender analysis
+* Age-group analysis
+* Income-group analysis
+* Occupation analysis
+* State-level analysis
+
+#### Transaction Analytics
+
+* Transaction amount
+* Transaction count
+* Average transaction value
+* Expense categories
+* Payment channels
+* Weekly trends
+* Quarterly trends
+
+#### Financial KPIs
+
+* Revenue
+* Annual fees
+* Interest earned
+* Customer acquisition cost
+* Activation rate
+* Delinquency rate
+* Credit utilization
+
+---
+
+# ✦ Power BI Analytics
+
+The `PowerBI/` directory documents the Business Intelligence layer of the project.
+
+### Power BI Workflow
+
+```text
+CSV Data
+   ↓
+Power Query
+   ↓
+Data Cleaning
+   ↓
+Data Modeling
+   ↓
+Relationships
+   ↓
+DAX Measures
+   ↓
+KPI Cards
+   ↓
+Interactive Visualizations
+```
+
+### Recommended Power BI Pages
+
+#### 📊 Executive Overview
+
+* Total Revenue
+* Total Transactions
+* Total Customers
+* Interest Earned
+* Activation Rate
+* Delinquency Rate
+
+#### 💳 Transaction Analysis
+
+* Transaction trends
+* Card category performance
+* Expense type analysis
+* Payment method analysis
+
+#### 👥 Customer Analysis
+
+* Age groups
+* Gender
+* Income
+* Education
+* Occupation
+* State
+
+#### 📈 Weekly Analysis
+
+* Weekly revenue
+* Transaction trends
+* Week-over-week movement
+* Delinquency trends
+
+---
+
+# ✦ Interactive Web Dashboard
+
+The production web application is built with **React + Vite**.
+
+### Dashboard Views
+
+#### 📈 Weekly Analysis
+
+Explore:
+
+* Weekly revenue
+* Transaction momentum
+* Trend analysis
+* Delinquency mix
+
+#### 💳 Transaction Report
+
+Explore:
+
+* Card categories
+* Expense categories
+* Payment methods
+* Quarterly trends
+* Transaction performance
+
+#### 👥 Customer Report
+
+Explore:
+
+* Gender
+* Age
+* Income
+* Occupation
+* Education
+* State-level customer distribution
+
+### Interactive Filtering
+
+The dashboard provides dynamic filtering across multiple analytical dimensions.
+
+---
+
+# ✦ Dataset
+
+The project uses structured CSV datasets containing customer and credit-card financial information.
+
+### Primary datasets
+
+```text
+public/data/
+│
+├── credit_card.csv
+├── customer.csv
+├── credit_card_mysql_ready_uploaded.csv
+└── cust_add.csv
+```
+
+### Core analytical dimensions
+
+```text
+Customer
+├── Client Number
+├── Age
+├── Gender
+├── Education
+├── Marital Status
+├── State
+├── Occupation
+└── Income
+
+Credit Card
+├── Card Category
+├── Annual Fees
+├── Credit Limit
+├── Revolving Balance
+├── Transaction Amount
+├── Transaction Count
+├── Utilization Ratio
+├── Expense Type
+├── Payment Method
+├── Interest Earned
+└── Delinquency
 ```
 
 ---
 
-## 🎯 Business Problem & Objectives
+# ✦ Key Financial KPIs
 
-### The Business Challenge
-A retail banking portfolio managing over 10,000 credit card accounts needed answers to critical operational questions:
-- **Revenue Drivers:** Where is the $56.5M portfolio revenue originating (fees, spend, interest)?
-- **Product Imbalance:** Why does the entry-level Blue card account for over 83% of total revenue, and how can premium card adoption (Silver, Gold, Platinum) be accelerated?
-- **Payment Method Adoption:** What proportion of spend occurs via physical POS (Swipe/Chip) versus online channels?
-- **Credit Risk:** What is the portfolio's delinquency rate, and which customer occupations and utilization brackets present default vulnerabilities?
-- **Acquisition Efficiency:** Are marketing acquisition costs (CAC) generating adequate returns, and why do 42.5% of accounts remain unactivated after 30 days?
+The dashboard and analytical layer focus on KPIs such as:
 
-### Analytical Objectives
-1. Build an auditable relational data pipeline using SQL.
-2. Formulate enterprise DAX measures for executive reporting.
-3. Provide an interactive web dashboard with zero-latency cross-filtering for decision-makers.
-4. Deliver actionable strategic recommendations to optimize profitability and reduce delinquency.
+| KPI                       | Business Meaning               |
+| ------------------------- | ------------------------------ |
+| Total Revenue             | Overall financial contribution |
+| Transaction Amount        | Customer spending volume       |
+| Transaction Count         | Transaction activity           |
+| Interest Earned           | Interest contribution          |
+| Annual Fees               | Fee-based revenue              |
+| Activation Rate           | Early customer activation      |
+| Delinquency Rate          | Portfolio risk indicator       |
+| Credit Utilization        | Credit usage behavior          |
+| Customer Acquisition Cost | Acquisition efficiency         |
 
----
-
-## 🛠️ Tools & Technologies
-
-- **Database / Querying:** SQL (MySQL & PostgreSQL compatible DDL, DML, Window Functions, Views)
-- **Business Intelligence:** Microsoft Power BI (Star Schema, Power Query M, DAX Time Intelligence)
-- **Frontend Framework:** React 18, Vite 5, JavaScript (ES6+)
-- **Data Visualization:** Recharts, custom SVG gauges and progress bars
-- **Data Processing:** PapaParse (in-browser CSV parsing & relational joining)
-- **Styling:** Modular CSS3 (responsive grid, themes, flexbox)
-- **Version Control:** Git, GitHub
-- **Cloud Hosting & CI/CD:** Render (Static Site deployment)
+> KPI values should be interpreted directly from the underlying datasets and analytical queries.
 
 ---
 
-## 📊 Datasets & Data Model
+# ✦ Business Insights
 
-The project utilizes real financial datasets located in [`public/data/`](public/data/):
-- **`credit_card.csv`** (10,108 rows): Account transactions, credit limits, revolving balances, interest, fees, utilization, and delinquency flags.
-- **`customer.csv`** (10,108 rows): Customer demographics, age, gender, education, marital status, state, occupation, income, and satisfaction scores.
-- **`credit_card_mysql_ready_uploaded.csv`** & **`cust_add.csv`** (185 rows each): Incremental update records.
+The project enables analysis of several important business questions:
 
-### Relational Model (Joined on `Client_Num`)
+### 💳 Card Portfolio
 
-```
-  ┌─────────────────────────────┐               ┌─────────────────────────────┐
-  │        DIM_CUSTOMER         │               │      FACT_CREDIT_CARD       │
-  ├─────────────────────────────┤               ├─────────────────────────────┤
-  │ Client_Num (PK)             │◄─────────────►│ Client_Num (FK)             │
-  │ Customer_Age                │    1-to-1     │ Card_Category               │
-  │ Gender                      │               │ Annual_Fees                 │
-  │ Dependent_Count             │               │ Activation_30_Days          │
-  │ Education_Level             │               │ Customer_Acq_Cost           │
-  │ Marital_Status              │               │ Week_Start_Date             │
-  │ state_cd                    │               │ Week_Num                    │
-  │ Zipcode                     │               │ Qtr                         │
-  │ Car_Owner                   │               │ Credit_Limit                │
-  │ House_Owner                 │               │ Total_Revolving_Bal         │
-  │ Personal_loan               │               │ Total_Trans_Amt             │
-  │ contact                     │               │ Total_Trans_Ct              │
-  │ Customer_Job                │               │ Avg_Utilization_Ratio       │
-  │ Income                      │               │ Use_Chip                    │
-  │ Cust_Satisfaction_Score     │               │ Exp_Type                    │
-  └─────────────────────────────┘               │ Interest_Earned             │
-                                                │ Delinquent_Acc              │
-                                                └─────────────────────────────┘
-```
+Which card categories contribute the highest financial value?
 
-Detailed definitions are available in the **[Data Dictionary](Documentation/data-dictionary.md)**.
+### 📈 Transaction Momentum
+
+How does transaction activity change across weeks and quarters?
+
+### 👥 Customer Segmentation
+
+Which demographic and income segments contribute the most revenue?
+
+### 💰 Spending Behavior
+
+Which expenditure categories dominate customer spending?
+
+### ⚠️ Credit Risk
+
+How are delinquency and utilization distributed across customer segments?
+
+### 🎯 Acquisition
+
+How does customer acquisition cost relate to activation and portfolio value?
 
 ---
 
-## 🗄️ SQL Analytics Suite
+# ✦ Repository Structure
 
-The [`SQL/`](SQL/) directory contains modular scripts addressing the entire analytical lifecycle:
-
-| Script | Purpose & Coverage | Key Queries / Techniques |
-| :--- | :--- | :--- |
-| **[`01_database_schema.sql`](SQL/01_database_schema.sql)** | DDL schema creation | Table definitions, primary/foreign keys, indexes, bulk import syntax |
-| **[`02_data_cleaning.sql`](SQL/02_data_cleaning.sql)** | Data cleaning & enrichment | Duplicate checks, whitespace trimming, date standardization, master view |
-| **[`03_customer_analysis.sql`](SQL/03_customer_analysis.sql)** | Demographics & segmentation | Spend by gender, age groups, occupation breakdown, income brackets, states |
-| **[`04_transaction_analysis.sql`](SQL/04_transaction_analysis.sql)** | Spend & transaction dynamics | Ticket size, expense categories, payment channels, quarterly & weekly trends (`LAG()`) |
-| **[`05_kpi_analysis.sql`](SQL/05_kpi_analysis.sql)** | Executive KPIs & risk | Top-line scorecard, CAC ROI, 30-day activation, delinquency profiling, utilization tiers |
-
----
-
-## 📈 Power BI Analytics & Modeling
-
-The [`PowerBI/`](PowerBI/) folder documents the Power BI architecture:
-- **Data Model:** Clean Star Schema linking `Fact_CreditCard` and `Dim_Customer` via `Client_Num`.
-- **Power Query ETL:** Data cleaning, type conversion, duplicate handling, and conditional bucketing (Age Groups, Income Groups).
-- **Core DAX Measures:**
-  - `Total Revenue = SUM(Fact_CreditCard[Annual_Fees]) + SUM(Fact_CreditCard[Total_Trans_Amt]) + SUM(Fact_CreditCard[Interest_Earned])`
-  - `Activation Rate = DIVIDE(CALCULATE(COUNTROWS(Fact_CreditCard), Fact_CreditCard[Activation_30_Days] = 1), COUNTROWS(Fact_CreditCard), 0)`
-  - `Delinquency Rate = DIVIDE(CALCULATE(COUNTROWS(Fact_CreditCard), Fact_CreditCard[Delinquent_Acc] = 1), COUNTROWS(Fact_CreditCard), 0)`
-  - `WoW Revenue Growth %` using `LAG` / `Week_Num - 1`.
-- **Visual Canvas Design:** Specifications for Transaction Reports, Customer Demographics, and Weekly Momentum pages.
-
-*See [PowerBI/README.md](PowerBI/README.md) for complete DAX formulas and visual configuration.*
-
----
-
-## 💻 Interactive Web Dashboard (React + Vite)
-
-The live web application serves as the production presentation layer for the analytics project:
-- **Client-Side CSV Parsing:** Parses the four CSV datasets in parallel via PapaParse and normalizes records into an in-memory analytics store.
-- **Three Specialized Analytical Views:**
-  1. **Weekly Analysis:** Tracks 53 weeks of revenue momentum, Week-over-Week changes, and delinquency mix.
-  2. **Transaction Report:** Deep-dive into card categories, quarterly comparisons, expense categories, and payment channels.
-  3. **Customer Report:** Demographic analysis across gender, age brackets, income tiers, job classifications, and top states.
-- **Cross-Filtering Panel:** Allows multi-dimensional filtering across 12 distinct attributes (quarter, card type, gender, spend category, payment method, etc.) with instant chart updates.
-
----
-
-## 🏆 Verified Financial KPIs
-
-All KPIs have been calculated and programmatically verified across the 10,293 customer accounts:
-
-| KPI Metric | Verified Actual Value | Description / Calculation |
-| :--- | :--- | :--- |
-| **Total Portfolio Revenue** | **$56,517,010.81** (~$56.52M) | Annual Fees + Total Trans Amt + Interest Earned |
-| **Total Transaction Amount** | **$45,533,021.00** (~$45.53M) | Gross customer purchase spend |
-| **Total Transaction Count** | **667,234 transactions** | Total volume of transactions executed |
-| **Net Interest Earned** | **$7,982,479.81** (~$7.98M) | Finance charges on revolving balances |
-| **Blue Card Revenue** | **$47,188,611.62** (~$47.19M) | 83.5% of total portfolio revenue |
-| **Male Cardholder Revenue** | **$30,929,733.66** (~$30.93M) | 54.7% revenue contribution |
-| **Female Cardholder Revenue** | **$25,587,277.15** (~$25.59M) | 45.3% revenue contribution |
-| **Top Job Revenue (Businessman)** | **$17,697,472.01** (~$17.70M) | Highest revenue generating occupation |
-| **High-Income Segment Revenue** | **$29,841,026.07** (~$29.84M) | Accounts earning >$70,000 |
-| **30-Day Card Activation Rate** | **57.46%** (5,914 accounts) | Accounts active within first month |
-| **Portfolio Delinquency Rate** | **6.06%** (624 accounts) | Non-performing / delinquent accounts |
-
----
-
-## 💡 Key Business Insights
-
-1. **Card Tier Concentration:** The **Blue card** drives **83.5% ($47.19M)** of total portfolio revenue. Premium tiers (Silver, Gold, Platinum) represent significant untapped potential for upgrade campaigns targeting high-income cardholders.
-2. **Channel Dynamics:** **Swipe transactions** dominate at **$35.0M (61.9%)**, followed by **Chip ($17.1M)** and **Online ($4.4M)**. Online spend is underrepresented, indicating an opportunity for digital wallet and recurring billing incentives.
-3. **Spend Allocation:** **Bills ($14.6M)** and **Entertainment ($9.9M)** represent the top spend categories, accounting for over 43% of total expenditures.
-4. **Demographics:** **High-Income accounts (>$70K)** generate **52.8% ($29.84M)** of total revenue. **Businessmen** are the single most profitable occupational cohort ($17.70M).
-5. **Credit Risk & Activation:** **57.46%** of accounts activate within 30 days, leaving ~42.5% inactive. The **6.06% delinquency rate** is heavily concentrated among high-utilization accounts (>70%).
-
-*Read the full report in **[Documentation/insights.md](Documentation/insights.md)**.*
-
----
-
-## 📂 Project Structure
-
-```
+```text
 Credit-Card-Financial-Dashboard/
 │
-├── SQL/                                    # SQL Analytics Suite
-│   ├── 01_database_schema.sql              # Schema DDL, keys, indexes & bulk load
-│   ├── 02_data_cleaning.sql                # Data cleaning, deduplication & master view
-│   ├── 03_customer_analysis.sql            # Demographics, age, income & job analysis
-│   ├── 04_transaction_analysis.sql         # Spend amounts, channels & weekly trends
-│   └── 05_kpi_analysis.sql                 # Executive KPIs, CAC, risk & segmentation
+├── 📊 PowerBI/
+│   └── README.md
 │
-├── PowerBI/                                # Power BI Analytics & Modeling Layer
-│   └── README.md                           # Star schema, DAX measures & visual specs
+├── 🗄️ SQL/
+│   ├── 01_database_schema.sql
+│   ├── 02_data_cleaning.sql
+│   ├── 03_customer_analysis.sql
+│   ├── 04_transaction_analysis.sql
+│   └── 05_kpi_analysis.sql
 │
-├── Documentation/                          # Project Documentation
-│   ├── business-problem.md                 # Business context & stakeholder objectives
-│   ├── data-dictionary.md                  # Comprehensive column-level dictionary
-│   └── insights.md                         # Empirical insights & strategic recommendations
+├── 📚 Documentation/
+│   ├── business-problem.md
+│   ├── data-dictionary.md
+│   └── insights.md
 │
-├── Data/                                   # Data Architecture
-│   └── README.md                           # Dataset documentation & workflow
+├── 📁 Data/
+│   └── README.md
 │
-├── public/                                 # Static Assets & Datasets
-│   └── data/                               # CSV Data Sources (served to web app & BI)
-│       ├── credit_card.csv
-│       ├── customer.csv
-│       ├── credit_card_mysql_ready_uploaded.csv
-│       └── cust_add.csv
+├── 📦 public/
+│   └── data/
 │
-├── src/                                    # React Web Application Source Code
-│   ├── components/                         # UI components, Recharts visualizations
-│   ├── hooks/                              # Custom React hooks (useDashboard)
-│   ├── pages/                              # WeeklyPage, TransactionPage, CustomerPage
-│   ├── utils/                              # Data loading, normalization & aggregations
-│   ├── App.jsx                             # Main application container
-│   ├── main.jsx                            # React DOM entry point
-│   └── styles.css                          # Application styling
+├── 💻 src/
+│   ├── components/
+│   ├── hooks/
+│   ├── pages/
+│   ├── utils/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles.css
 │
-├── scripts/                                # Verification Scripts
-│   └── verify.mjs                          # Statistical verification script
+├── scripts/
+│   └── verify.mjs
 │
-├── package.json                            # Node.js dependencies & scripts
-├── package-lock.json                       # Dependency lockfile
-├── vite.config.js                          # Vite build configuration
-├── render.yaml                             # Render static site blueprint
-├── index.html                              # HTML entry point
-└── README.md                               # Project documentation showcase
+├── index.html
+├── package.json
+├── package-lock.json
+├── render.yaml
+├── vite.config.js
+└── README.md
 ```
 
 ---
 
-## 🚀 How to Run Locally
+# ✦ Run Locally
 
 ### Prerequisites
-- Node.js (version 18 or higher recommended)
-- npm (Node package manager)
 
-### Installation & Development Server
+* Node.js 18+
+* npm
+* Git
+
+### Clone Repository
+
 ```bash
-# 1. Clone the repository
 git clone https://github.com/khilenderrajput/Credit-Card-Financial-Dashboard.git
+```
 
-# 2. Navigate to the project directory
+### Enter Project
+
+```bash
 cd Credit-Card-Financial-Dashboard
+```
 
-# 3. Install dependencies
+### Install Dependencies
+
+```bash
 npm install
+```
 
-# 4. Start the development server
+### Start Development Server
+
+```bash
 npm run dev
 ```
 
-Open your browser at `http://localhost:5173` to explore the dashboard.
+Open:
 
-### Run Statistical Verification
-```bash
-npm run verify
+```text
+http://localhost:5173
 ```
-This runs the automated Node verification script against the raw CSV datasets, checking all financial metrics against the baseline.
 
 ---
 
-## 📦 Production Build & Deployment
+# ✦ Production Build
 
-### Build Command
+Create an optimized production build:
+
 ```bash
 npm run build
 ```
-Vite generates optimized production assets in the `dist/` directory, including automatic code splitting for charting libraries.
 
-### Render Deployment Configuration
-The application is pre-configured for automated deployment on **Render**:
-- **Service Type:** `Static Site`
-- **Build Command:** `npm install && npm run build`
-- **Publish Directory:** `dist`
-- **Blueprint File:** [`render.yaml`](render.yaml)
+Vite generates the production files inside:
+
+```text
+dist/
+```
 
 ---
 
-## 📚 Documentation Links
+# ✦ Render Deployment
 
-- **[Business Problem & Context](Documentation/business-problem.md)**
-- **[Data Dictionary](Documentation/data-dictionary.md)**
-- **[Business Insights & Recommendations](Documentation/insights.md)**
-- **[Power BI Architecture & DAX](PowerBI/README.md)**
-- **[Data Directory Overview](Data/README.md)**
-- **[SQL Scripts Directory](SQL/)**
+The web dashboard is deployed as a **Static Site on Render**.
+
+### Production configuration
+
+```text
+Service Type:
+Static Site
+
+Build Command:
+npm install && npm run build
+
+Publish Directory:
+dist
+```
+
+### 🚀 Live Application
+
+<a href="https://credit-card-financial-dashboard-5p2g.onrender.com" target="_blank">
+
+**OPEN LIVE CREDIT CARD DASHBOARD →**
+
+</a>
 
 ---
 
-### Author
-**Khilender Rajput**  
-*Data Analyst | Financial Analytics | BI Developer*  
-GitHub: [@khilenderrajput](https://github.com/khilenderrajput)
+# ✦ GitHub Repository
+
+<a href="https://github.com/khilenderrajput/Credit-Card-Financial-Dashboard" target="_blank">
+
+**VIEW SOURCE CODE ON GITHUB →**
+
+</a>
+
+---
+
+# ✦ Project Highlights
+
+```text
+✓ End-to-End Financial Analytics
+✓ SQL-Based Analytical Layer
+✓ Power BI Modeling Documentation
+✓ Interactive React Dashboard
+✓ Dynamic Financial Visualizations
+✓ Customer Segmentation
+✓ Transaction Analysis
+✓ Revenue Analysis
+✓ Credit Risk Analysis
+✓ Production Deployment
+✓ GitHub Version Control
+✓ Responsive Web Interface
+```
+
+---
+
+# ✦ Why This Project Matters
+
+This project demonstrates the complete analytical workflow:
+
+```text
+Raw Data
+   ↓
+Data Cleaning
+   ↓
+SQL Analysis
+   ↓
+Business Metrics
+   ↓
+Power BI Modeling
+   ↓
+Interactive Visualization
+   ↓
+Business Insights
+   ↓
+Production Dashboard
+```
+
+It demonstrates practical experience across both **technical analytics** and **business intelligence** workflows.
+
+---
+
+# ✦ Documentation
+
+| Resource         | Description                           |
+| ---------------- | ------------------------------------- |
+| 🗄️ SQL          | Analytical SQL scripts                |
+| 📊 Power BI      | BI modeling & dashboard documentation |
+| 📚 Documentation | Business context & insights           |
+| 📁 Data          | Dataset documentation                 |
+| 💻 Web Dashboard | React/Vite implementation             |
+
+---
+
+# ✦ Author
+
+### Khilender Rajput
+
+**Aspiring Data Analyst / Data Analytics Engineer**
+
+Interested in:
+
+`Data Analytics` · `SQL` · `Power BI` · `Python` · `Business Intelligence` · `Data Visualization`
+
+---
+
+<p align="center">
+
+### ✦ Explore the Dashboard ✦
+
+<a href="https://credit-card-financial-dashboard-5p2g.onrender.com">
+
+<img src="https://img.shields.io/badge/🚀%20LIVE%20DASHBOARD-Explore%20Now-111827?style=for-the-badge" />
+
+</a>
+
+  
+
+<a href="https://github.com/khilenderrajput/Credit-Card-Financial-Dashboard">
+
+<img src="https://img.shields.io/badge/⌘%20GITHUB-VIEW%20SOURCE-111827?style=for-the-badge&logo=github&logoColor=white" />
+
+</a>
+
+</p>
+
+---
+
+<p align="center">
+
+**Built with data, analysis, visualization & curiosity.**
+
+</p>

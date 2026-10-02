@@ -1,14 +1,11 @@
--- ==============================================================================
 -- 05_kpi_analysis.sql
 -- Credit Card Financial Analytics - Executive KPIs, Risk & Portfolio Metrics
--- ==============================================================================
-
 USE credit_card_db;
 
--- ------------------------------------------------------------------------------
+
 -- 1. Executive Master KPI Scorecard
 -- High-level financial summary matching the dashboard top-line metrics
--- ------------------------------------------------------------------------------
+
 SELECT 
     COUNT(DISTINCT Client_Num) AS total_accounts,
     ROUND(SUM(Total_Revenue), 2) AS total_portfolio_revenue,
@@ -24,10 +21,10 @@ SELECT
     ROUND(SUM(Delinquent_Acc) * 100.0 / COUNT(*), 2) AS delinquency_rate_pct
 FROM vw_credit_card_master;
 
--- ------------------------------------------------------------------------------
+
 -- 2. Card Category Performance Matrix (Blue, Silver, Gold, Platinum)
 -- Detailed unit economics and revenue contributions across card tiers
--- ------------------------------------------------------------------------------
+
 SELECT 
     Card_Category,
     COUNT(Client_Num) AS total_accounts,
@@ -46,10 +43,10 @@ FROM vw_credit_card_master
 GROUP BY Card_Category
 ORDER BY total_revenue DESC;
 
--- ------------------------------------------------------------------------------
+
 -- 3. Customer Acquisition Cost (CAC) vs Revenue Generation (LTV / ROI)
 -- Evaluates marketing spend efficiency by Card Category and Job
--- ------------------------------------------------------------------------------
+
 SELECT 
     Card_Category,
     ROUND(SUM(Customer_Acq_Cost), 2) AS total_cac_spent,
@@ -60,10 +57,10 @@ FROM vw_credit_card_master
 GROUP BY Card_Category
 ORDER BY revenue_multiple_on_cac DESC;
 
--- ------------------------------------------------------------------------------
+
 -- 4. 30-Day Card Activation Rate Drivers
 -- Breakdown by card category, gender, and income segment
--- ------------------------------------------------------------------------------
+
 SELECT 
     Card_Category,
     COUNT(Client_Num) AS total_issued,
@@ -83,10 +80,10 @@ FROM vw_credit_card_master
 GROUP BY Income_Group
 ORDER BY activation_rate_pct DESC;
 
--- ------------------------------------------------------------------------------
+
 -- 5. Credit Delinquency Risk & Default Vulnerability Analysis
 -- Profiles delinquent customers across Occupation, Age, and Utilization
--- ------------------------------------------------------------------------------
+
 SELECT 
     Customer_Job,
     COUNT(Client_Num) AS total_accounts,
@@ -99,10 +96,10 @@ FROM vw_credit_card_master
 GROUP BY Customer_Job
 ORDER BY delinquency_rate_pct DESC;
 
--- ------------------------------------------------------------------------------
+
 -- 6. Credit Utilization Tiers vs Delinquency Correlation
 -- Checks if higher utilization accounts carry higher delinquency rates
--- ------------------------------------------------------------------------------
+
 SELECT 
     CASE 
         WHEN Avg_Utilization_Ratio = 0 THEN '0% (Non-Users)'
@@ -128,10 +125,9 @@ GROUP BY
     END
 ORDER BY total_revenue DESC;
 
--- ------------------------------------------------------------------------------
 -- 7. Customer Value Segmentation Matrix (RFM-Style Unit Economics)
 -- Classifies accounts into VIP, Core Profitable, Low Engagement, and At-Risk
--- ------------------------------------------------------------------------------
+
 SELECT 
     CASE 
         WHEN Total_Revenue >= 10000 AND Delinquent_Acc = 0 THEN 'Tier 1: VIP High-Value'

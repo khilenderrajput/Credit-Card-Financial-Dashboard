@@ -1,8 +1,6 @@
--- ==============================================================================
+
 -- 01_database_schema.sql
 -- Credit Card Financial Analytics - Database Schema Definition
--- Database: MySQL / PostgreSQL Compatible
--- ==============================================================================
 
 -- 1. Create Analytics Database
 CREATE DATABASE IF NOT EXISTS credit_card_db;
@@ -12,10 +10,9 @@ USE credit_card_db;
 DROP TABLE IF EXISTS cc_detail;
 DROP TABLE IF EXISTS cust_detail;
 
--- ==============================================================================
+
 -- Table: cust_detail (Customer Profile Dimension)
--- Contains demographic, financial, and contact profile for each credit card customer.
--- ==============================================================================
+
 CREATE TABLE cust_detail (
     Client_Num BIGINT NOT NULL,
     Customer_Age INT NOT NULL,
@@ -36,10 +33,9 @@ CREATE TABLE cust_detail (
     CONSTRAINT pk_customer PRIMARY KEY (Client_Num)
 );
 
--- ==============================================================================
+
 -- Table: cc_detail (Credit Card Transactions & Account Performance Fact Table)
--- Contains account-level performance, transaction spend, interest, fees, and risk indicators.
--- ==============================================================================
+
 CREATE TABLE cc_detail (
     Client_Num BIGINT NOT NULL,
     Card_Category VARCHAR(20) NOT NULL,
@@ -64,10 +60,9 @@ CREATE TABLE cc_detail (
         ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- ==============================================================================
+
 -- Indexes for Performance Optimization
--- Speed up analytical aggregations, slicing by card tier, time, and demographics
--- ==============================================================================
+
 CREATE INDEX idx_cc_card_category ON cc_detail (Card_Category);
 CREATE INDEX idx_cc_qtr ON cc_detail (Qtr);
 CREATE INDEX idx_cc_week_start ON cc_detail (Week_Start_Date);
@@ -77,25 +72,6 @@ CREATE INDEX idx_cust_gender ON cust_detail (Gender);
 CREATE INDEX idx_cust_job ON cust_detail (Customer_Job);
 CREATE INDEX idx_cust_state ON cust_detail (state_cd);
 
--- ==============================================================================
--- Bulk Data Loading Template (MySQL)
--- Note: Replace '/path/to/data/' with the absolute local file path if executing via LOAD DATA.
--- Ensure secure_file_priv is configured or import via MySQL Workbench / CLI.
--- ==============================================================================
 
--- LOAD DATA LOCAL INFILE 'public/data/customer.csv'
--- INTO TABLE cust_detail
--- FIELDS TERMINATED BY ',' 
--- ENCLOSED BY '"'
--- LINES TERMINATED BY '\n'
--- IGNORE 1 ROWS
--- (Client_Num, Customer_Age, Gender, Dependent_Count, Education_Level, Marital_Status, state_cd, Zipcode, Car_Owner, House_Owner, Personal_loan, contact, Customer_Job, Income, Cust_Satisfaction_Score);
-
--- LOAD DATA LOCAL INFILE 'public/data/credit_card.csv'
--- INTO TABLE cc_detail
--- FIELDS TERMINATED BY ',' 
--- ENCLOSED BY '"'
--- LINES TERMINATED BY '\n'
--- IGNORE 1 ROWS
 -- (Client_Num, Card_Category, Annual_Fees, Activation_30_Days, Customer_Acq_Cost, @Week_Start_Date, Week_Num, Qtr, current_year, Credit_Limit, Total_Revolving_Bal, Total_Trans_Amt, Total_Trans_Ct, Avg_Utilization_Ratio, Use_Chip, Exp_Type, Interest_Earned, Delinquent_Acc)
 -- SET Week_Start_Date = STR_TO_DATE(@Week_Start_Date, '%d-%m-%Y');

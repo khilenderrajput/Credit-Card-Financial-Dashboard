@@ -1,14 +1,13 @@
--- ==============================================================================
+
 -- 02_data_cleaning.sql
 -- Credit Card Financial Analytics - Data Cleaning & Standardization Queries
--- ==============================================================================
 
 USE credit_card_db;
 
--- ------------------------------------------------------------------------------
+
 -- 1. Identify Duplicate Client Records
 -- Check if any Client_Num appears multiple times in raw customer or card tables
--- ------------------------------------------------------------------------------
+
 SELECT 
     Client_Num, 
     COUNT(*) AS record_count
@@ -26,7 +25,7 @@ HAVING COUNT(*) > 1;
 -- ------------------------------------------------------------------------------
 -- 2. Clean and Standardize Whitespace in Categorical Columns
 -- Raw CSV inputs often contain trailing whitespaces such as 'Chip ' or 'Swipe '
--- ------------------------------------------------------------------------------
+
 UPDATE cc_detail
 SET 
     Use_Chip = TRIM(Use_Chip),
@@ -46,8 +45,7 @@ SET
 -- ------------------------------------------------------------------------------
 -- 3. Date Standardization and Formatting
 -- Ensure Week_Start_Date is in ISO standard YYYY-MM-DD
--- ------------------------------------------------------------------------------
--- Check for any null or invalid dates
+
 SELECT 
     COUNT(*) AS invalid_date_records
 FROM cc_detail
@@ -55,8 +53,7 @@ WHERE Week_Start_Date IS NULL;
 
 -- ------------------------------------------------------------------------------
 -- 4. Check for Orphan Records (Referential Integrity Check)
--- Identify accounts in cc_detail that have no matching profile in cust_detail
--- ------------------------------------------------------------------------------
+
 SELECT 
     cc.Client_Num AS unmatched_client_num,
     cc.Card_Category,

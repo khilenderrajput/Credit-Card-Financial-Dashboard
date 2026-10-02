@@ -1,4 +1,10 @@
-# 💳 Credit Card Financial Analytics Dashboard
+# 💳 Credit Card Financial Data Analysis
+
+An end-to-end **Data Analytics and Business Intelligence project** focused on Credit Card financial data analysis using **SQL and Power BI**.
+
+The project analyzes customer behavior, revenue, transactions, card categories, expenditure patterns, income groups, occupations, age groups, geographical distribution, customer segmentation, credit utilization, activation, and delinquency risk.
+
+A separate **JavaScript + React + Vite live dashboard** is included as an interactive visualization layer for presenting the analytical findings.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Financial%20Analytics-Project-111827?style=for-the-badge&logo=googleanalytics&logoColor=white" />

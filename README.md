@@ -33,7 +33,7 @@
 
 **Live links:**
 - 🌐 **Netlify:** https://sparkling-treacle-fb042a.netlify.app/
-- 🚀 **Render:** https://credit-card-financial-dashboard-5p2g.onrender.com
+
 
 Explore the interactive web presentation of the project's financial analytics and business insights.
 
